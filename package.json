@@ -1,0 +1,25 @@
+{
+  "name": "stringify",
+  "version": "1.0.0",
+  "description": "An NPM package for all things related to strings",
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [
+    "string",
+    "strings",
+    "stringify",
+    "words",
+    "word"
+  ],
+  "author": "mood.",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.3.4"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
