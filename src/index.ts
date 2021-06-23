@@ -3,4 +3,5 @@ export { joinNScramble } from "./functions/joinN'Scramble";
 export { randomString } from "./functions/randomString";
 export { reverse } from "./functions/reverse";
 export { scramble } from "./functions/scramble";
-export { toASCII as ASCII } from "./functions/toASCII";
+export { toASCII } from "./functions/toASCII";
+export { isString } from "./functions/isString";

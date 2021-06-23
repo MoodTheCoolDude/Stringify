@@ -6,6 +6,7 @@ export function randomString(length: number): string {
   if (!length) throw new TypeError("Length Parameter is missing");
   if (length < 0)
     throw new TypeError("Length Parameter must be a positive number");
+  if (isNaN(length)) throw new TypeError("Length Parameter must be a number");
   const characters = [];
   let string = "";
 
