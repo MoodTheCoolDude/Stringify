@@ -26,5 +26,12 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "homepage": "https://github.com/MoodTheCoolDude/npm-stringulation#readme",
+  "bugs": {
+    "url": "https://github.com/MoodTheCoolDude/npm-stringulation/issues"
+  },
+  "repository": {
+    "url": "https://github.com/MoodTheCoolDude/npm-stringulation"
+  }
 }
