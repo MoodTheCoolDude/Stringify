@@ -3,6 +3,7 @@
  */
 
 export function scramble(word: any) {
+  if (!word) throw new TypeError("Word Parameter is missing");
   var shuffledWord = "";
   word = word.split("");
   while (word.length > 0) {
