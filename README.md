@@ -1,6 +1,6 @@
-# stringify
+# stringulation
 
-![](https://i.imgur.com/Io81B2O.png)
+![](https://i.imgur.com/QinfAqa.png)
 
 An NPM package for all things related to strings
 
@@ -16,7 +16,7 @@ const {
   reverse,
   scramble,
   ASCII,
-} = require("stringify");
+} = require("stringulation");
 
 join(["foo", "bar"], "_"); // Output: foo_bar
 joinNScramble(["foo", "bar"], "-"); // Possible Output: of-bora
@@ -36,7 +36,7 @@ import {
   reverse,
   scramble,
   ASCII,
-} from "stringify";
+} from "stringulation";
 
 join(["foo", "bar"], "_"); // Output: foo_bar
 joinNScramble(["foo", "bar"], "-"); // Possible Output: of-bora
@@ -45,3 +45,7 @@ reverse("foo bar"); // Output: rab oof
 scramble("foo bar"); // Possible Output: bo faro
 ASCII("foo bar"); // Output: 102 111 111 032 098 097 114
 ```
+
+#### License
+
+[**ISC**](https://choosealicense.com/licenses/isc/)
