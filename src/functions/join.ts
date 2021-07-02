@@ -4,13 +4,11 @@
  */
 
 export function join(words: string[], separator: string = ""): string {
-  if (!words || words.length === 1)
-    throw new TypeError("Words parameter must have 2 or more words");
-  let result = "";
-  for (let i = 0; i < words.length - 1; i++) {
-    result += words[i] + separator;
-  }
-  result += words[words.length - 1];
+  if (!Array.isArray(words))
+    throw new TypeError("Words parameter must be an array");
+  if (words.length <= 1)
+    throw new ReferenceError("Words parameter must have 2 or more words");
+  let result = words.join(separator);
 
   return result;
 }

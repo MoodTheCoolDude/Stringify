@@ -1,6 +1,6 @@
 {
   "name": "stringulation",
-  "version": "1.2.2",
+  "version": "2.0.0",
   "description": "An NPM package for all things related to strings",
   "main": "./lib/index.js",
   "scripts": {
@@ -20,7 +20,6 @@
   ],
   "author": "mood.",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
     "typescript": "^4.3.4"
   },

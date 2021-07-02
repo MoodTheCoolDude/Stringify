@@ -3,6 +3,6 @@
  */
 export function reverse(word: string): string {
   if (!word) throw new TypeError("Word Parameter is missing");
-  let arr = word.split("").reverse();
+  let arr = String(word).split("").reverse();
   return arr.join("");
 }
