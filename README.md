@@ -30,7 +30,7 @@ An NPM package for all things related to strings
  
 ### - [join](https://www.npmjs.com/package/stringulation#join)
  
-### - [randomString](https://www.npmjs.com/package/stringulation#randomString)
+### - [randomString](https://www.npmjs.com/package/stringulation#randomstring)
  
 ### - [reverse](https://www.npmjs.com/package/stringulation#reverse)
  
