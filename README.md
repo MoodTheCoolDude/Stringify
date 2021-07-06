@@ -61,17 +61,6 @@ const {
   scramble,
   toASCII,
 } = require("stringulation");
-<<<<<<< HEAD
-=======
-
-isString(885); // Output: false
-join(["foo", "bar"], "_"); // Output: "foo_bar"
-joinNScramble(["foo", "bar"], "-"); // Possible Output: "of-bora"
-randomString(10); // Possible Output: "[srS6sdw.4"
-reverse("foo bar"); // Output: "rab oof"
-scramble("foo bar"); // Possible Output: "bo faro"
-toASCII("foo bar"); // Output: "102 111 111 032 098 097 114"
->>>>>>> 400d5ce4bdb48c06973d067585c617085652149f
 ```
  
 **Typescript**
@@ -162,19 +151,9 @@ Function that has one parameter. It is the string that will be reversed.
 
 ### Example
 
-<<<<<<< HEAD
 ```js
 const { reverse } = require("stringulation");
 console.log(reverse("this will be reversed")); // "desrever eb lliw siht"
-=======
-isString(885); // Output: false
-join(["foo", "bar"], "_"); // Output: "foo_bar"
-joinNScramble(["foo", "bar"], "-"); // Possible Output: "of-bora"
-randomString(10); // Possible Output: "[srS6sdw.4"
-reverse("foo bar"); // Output: "rab oof"
-scramble("foo bar"); // Possible Output: "bo faro"
-toASCII("foo bar"); // Output: "102 111 111 032 098 097 114"
->>>>>>> 400d5ce4bdb48c06973d067585c617085652149f
 ```
 
 ---
