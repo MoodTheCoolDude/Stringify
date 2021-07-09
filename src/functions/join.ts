@@ -5,7 +5,7 @@
 
 export function join(words: string[], separator: string = ""): string {
   if (!Array.isArray(words))
-    throw new TypeError("Words parameter must be an array");
+    throw new ReferenceError("Words parameter must be an array");
   if (words.length <= 1)
     throw new ReferenceError("Words parameter must have 2 or more words");
   let result = words.join(separator);

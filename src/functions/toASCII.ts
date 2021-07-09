@@ -18,7 +18,7 @@ export function toASCII(
   if (!options.seperator) options.seperator = " ";
   if (!options.asNumber) options.asNumber = false;
   if (!options.array) options.array = false;
-  if (!word) throw new TypeError("Word Parameter is missing");
+  if (!word) throw new ReferenceError("Word Parameter is missing");
   if (typeof word !== "string") word = String(word);
   if (typeof options.seperator !== "string")
     options.seperator = String(options.seperator);

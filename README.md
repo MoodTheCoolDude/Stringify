@@ -54,6 +54,10 @@ npm i stringulation@latest
  
 ```js
 const {
+  capitalize,
+  isAllCapital,
+  isAllLowerCase,
+  isCapitalized,
   isString,
   join,
   randomString,
@@ -67,6 +71,10 @@ const {
  
 ```ts
 import {
+  capitalize,
+  isAllCapital,
+  isAllLowerCase,
+  isCapitalized,
   isString,
   join,
   randomString,
@@ -81,39 +89,131 @@ import {
 ---
  
 <br>
- 
-## isString
- 
-Function that has 2 parameters. The first parameter is the value to be checked if it's a string or not. The second parameter is an optional boolean that specfies whether it should also return true if the first parameter is a string array. This is true by default.
- 
+
+## capitalize
+
+Function that has 2 parameters. The first parameter is the value to be capitalized. The second parameter is an optional boolean that indicates whether each word should be capitalized or just the first. This is false by default.
+
 ### Example
- 
+
+```js
+const { capitalize } = require("stringulation");
+console.log(capitalize("this will be capitalized")); // "This will be capitalized"
+console.log(capitalize("this will be capitalized", true)); // "This Will Be Capitalized"
+```
+
+---
+
+## isAllCapital
+
+Function that has 1 parameter. The first parameter is the value to be checked. This returns true if the value is all uppercase.
+
+### Example
+
+```js
+const { isAllCapital } = require("stringulation");
+const uppercase = "THIS IS ALL CAPITAL";
+const mixed = "this IS half/HALF";
+const lowercase = "this is all lowercase";
+
+if (isAllCapital(uppercase)) {
+  console.log(uppercase + " is all capital!");
+} // "THIS IS ALL CAPITAL is all capital!"
+if (!isAllCapital(lowercase)) {
+  console.log(lowercase + " is not all capital!");
+} // "this is all lowercase is not all capital!"
+if (!isAllCapital(mixed)) {
+  console.log(mixed + " is not all capital!");
+} // "this IS half/HALF is not all capital!"
+```
+
+---
+
+## isAllLowerCase
+
+Function that has 1 parameter. The first parameter is the value to be checked. This returns true if the value is all lowercase.
+
+### Example
+
+```js
+const { isAllLowerCase } = require("stringulation");
+const uppercase = "THIS IS ALL CAPITAL";
+const mixed = "this IS half/HALF";
+const lowercase = "this is all lowercase";
+
+if (isAllCapital(lowercase)) {
+  console.log(lowercase + " is all lowercase!");
+} // "this is all lowercase is all lowercase!"
+if (!isAllCapital(uppercase)) {
+  console.log(uppercase + " is not all lowercase!");
+} // "THIS IS ALL CAPITAL is not all lowercase!"
+if (!isAllCapital(mixed)) {
+  console.log(mixed + " is not all lowercase!");
+} // "this IS half/HALF is not all lowercase!"
+```
+
+---
+
+## isCapitalized
+
+Function that has 2 parameters. The first parameter is the value to be checked. The second parameter is an optional boolean indicating whether each word should be checked or just the first word.
+
+### Example
+
+```js
+const { isCapitalized } = require("stringulation");
+const capitalized = "This is capitalized";
+const capitalizedAll = "This Is Capitalized";
+const improper = "this is not capitalized";
+const improper2 = "this Is not Capitalized";
+
+if (isCapitalized(capitalized)) {
+  console.log(capitalized + " is capitalized!");
+} // This is capitalized is capitalized!
+if (isCapitalized(capitalizedALL)) {
+  console.log(capitalized + " is capitalized!");
+} // This Is Capitalized is capitalized!
+if (!isCapitalized(improper)) {
+  console.log(improper + " is not capitalized!");
+} // this is not capitalized is not capitalized!
+if (!isCapitalized(improper2, true)) {
+  console.log(improper2 + " is not capitalized!");
+} // this Is not Capitalized is not capitalized!
+```
+
+---
+
+## isString
+
+Function that has 2 parameters. The first parameter is the value to be checked if it's a string or not. The second parameter is an optional boolean that specfies whether it should also return true if the first parameter is a string array. This is true by default.
+
+### Example
+
 ```js
 const { isString } = require("stringulation");
 const string = "this is a string!";
-const stringArray = ["this", "is", "a", "string"]
-const number = 123
-const numberArray = [1, 2, 3]
+const stringArray = ["this", "is", "a", "string"];
+const number = 123;
+const numberArray = [1, 2, 3];
 if (isString(string)) {
   console.log(string + " is a string!");
 } // "this is a string is a string!"
 
-if(isString(stringArray)){
-  console.log(stringArray + " is a string array!")
+if (isString(stringArray)) {
+  console.log(stringArray + " is a string array!");
 } // "["this", "is", "a", "string"] is a string array!"
 
-if(!isString(stringArray, false)){
-  console.log(stringArray + " is not a string!")
+if (!isString(stringArray, false)) {
+  console.log(stringArray + " is not a string!");
 } // "["this", "is", "a", "string"] is not a string!"
 
-if(!isString(number)){
-  console.log(number + " is not a string!")
+if (!isString(number)) {
+  console.log(number + " is not a string!");
 } // "123 is not a string!"
 
-if(!isString(numberArray)){
-  console.log(numberArray + " is not a string array!")
+if (!isString(numberArray)) {
+  console.log(numberArray + " is not a string array!");
 } // "[1, 2, 3] is not a string array!"
-
 ```
 
 ---

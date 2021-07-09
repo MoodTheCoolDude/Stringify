@@ -1,6 +1,6 @@
 {
   "name": "stringulation",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "An NPM package for all things related to strings",
   "main": "./lib/index.js",
   "scripts": {

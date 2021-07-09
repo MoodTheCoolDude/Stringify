@@ -3,7 +3,7 @@
  */
 
 export function randomString(length: number): string {
-  if (!length) throw new TypeError("Length Parameter is missing");
+  if (!length) throw new ReferenceError("Length Parameter is missing");
   if (length < 0)
     throw new TypeError("Length Parameter must be a positive number");
   if (isNaN(length) || length == NaN)
