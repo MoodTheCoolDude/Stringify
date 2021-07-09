@@ -25,27 +25,35 @@ An NPM package for all things related to strings
 # Table Of Contents
  
 ### - [Installation](https://www.npmjs.com/package/stringulation#installation)
- 
+
+### - [capitalize](https://www.npmjs.com/package/stringulation#capitalize)
+
+### - [isAllCapital](https://www.npmjs.com/package/stringulation#isallcapital)
+
+### - [isAllLowerCase](https://www.npmjs.com/package/stringulation#isalllowercase)
+
+### - [isCapitalized](https://www.npmjs.com/package/stringulation#iscapitalized)
+
 ### - [isString](https://www.npmjs.com/package/stringulation#isstring)
- 
+
 ### - [join](https://www.npmjs.com/package/stringulation#join)
- 
+
 ### - [randomString](https://www.npmjs.com/package/stringulation#randomstring)
- 
+
 ### - [reverse](https://www.npmjs.com/package/stringulation#reverse)
- 
+
 ### - [scramble](https://www.npmjs.com/package/stringulation#scramble)
- 
+
 ### - [toASCII](https://www.npmjs.com/package/stringulation#toascii)
- 
+
 ## Installation
- 
+
 **Note: Node.js 14.0.0 or newer is required.**
- 
+
 ```sh-session
 npm i stringulation@latest
 ```
- 
+
 </br>
  
 ### Importing functions
