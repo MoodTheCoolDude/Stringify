@@ -14,8 +14,8 @@
  
 An NPM package for all things related to strings
  
-- String detection
-- String generation
+- String Detection
+- String Generation
 - String Manipulation
  
 > Compatible with Javascript _`(.js)`_ & Typescript _`(.ts)`_!
@@ -27,6 +27,8 @@ An NPM package for all things related to strings
 ### - [Installation](https://www.npmjs.com/package/stringulation#installation)
 
 ### - [capitalize](https://www.npmjs.com/package/stringulation#capitalize)
+
+### - [insertNewLines](https://www.npmjs.com/package/stringulation#insertnewlines)
 
 ### - [isAllCapital](https://www.npmjs.com/package/stringulation#isallcapital)
 
@@ -63,6 +65,7 @@ npm i stringulation@latest
 ```js
 const {
   capitalize,
+  insertNewLines,
   isAllCapital,
   isAllLowerCase,
   isCapitalized,
@@ -80,6 +83,7 @@ const {
 ```ts
 import {
   capitalize,
+  insertNewLines,
   isAllCapital,
   isAllLowerCase,
   isCapitalized,
@@ -112,6 +116,68 @@ console.log(capitalize("this will be capitalized", true)); // "This Will Be Capi
 
 ---
 
+## insertNewLines
+
+Function that has 4 parameters. The first parameter is the string to have new lines inserted into. The second parameter is how many characters should be inbetween each line break. The third parameter is what to do when a line break goes through a word. Can be one of the following:
+
+- "hyphenate": Break words using hyphens
+- "none": Don't do anything about breaking words
+- "moveToBegin": Move the line break to the beginning of the word, which puts the word at the beginning of the new line. This will make the line shorter than the number given in the "insertEvery" parameter
+- "moveToEnd": Move the line break to the end of the word, which puts the word at the end of the new line. This will make the line longer than the number given in the "insertEvery" parameter
+
+It defaults to "none". The fourth parameter is only used whenever the third parameter is set the "hyphenate". It is the character that should be used instead of a hyphen. It defaults to "-"
+
+### Example
+
+```js
+const { insertNewLines } = require("stringulation");
+const longString =
+	"The insertNewLines function is used to insert line breaks in a long string to improve readability and understanding. It can be used to format long strings and make them easier to work with.";
+
+console.log(insertNewLines(longstring, 50, "hyphenate"));
+/*
+The insertNewLines function is used to insert line
+breaks in a long string to improve readability an-
+d understanding. It can be used to format long str-
+ings and make them easier to work with.
+*/
+
+console.log(insertNewLines(longstring, 50, "hyphenate", "!!!"));
+/*
+The insertNewLines function is used to insert line
+breaks in a long string to improve readability an!!!
+d understanding. It can be used to format long str!!!
+ings and make them easier to work with.
+*/
+
+console.log(insertNewLines(longString, 50, "moveToBegin"));
+/*
+The insertNewLines function is used to insert
+line breaks in a long string to improve
+readability and understanding. It can be used to
+format long strings and make them easier to work
+with.
+*/
+
+console.log(insertNewLines(longString, 50, "moveToEnd"));
+/*
+The insertNewLines function is used to insert line
+breaks in a long string to improve readability and
+understanding. It can be used to format long strings
+and make them easier to work with.
+*/
+
+console.log(insertNewLines(longString, 50, "none"));
+/*
+The insertNewLines function is used to insert line
+breaks in a long string to improve readability an
+d understanding. It can be used to format long str
+ings and make them easier to work with.
+*/
+```
+
+---
+
 ## isAllCapital
 
 Function that has 1 parameter. The first parameter is the value to be checked. This returns true if the value is all uppercase.
@@ -125,13 +191,13 @@ const mixed = "this IS half/HALF";
 const lowercase = "this is all lowercase";
 
 if (isAllCapital(uppercase)) {
-  console.log(uppercase + " is all capital!");
+	console.log(uppercase + " is all capital!");
 } // "THIS IS ALL CAPITAL is all capital!"
 if (!isAllCapital(lowercase)) {
-  console.log(lowercase + " is not all capital!");
+	console.log(lowercase + " is not all capital!");
 } // "this is all lowercase is not all capital!"
 if (!isAllCapital(mixed)) {
-  console.log(mixed + " is not all capital!");
+	console.log(mixed + " is not all capital!");
 } // "this IS half/HALF is not all capital!"
 ```
 
@@ -150,13 +216,13 @@ const mixed = "this IS half/HALF";
 const lowercase = "this is all lowercase";
 
 if (isAllCapital(lowercase)) {
-  console.log(lowercase + " is all lowercase!");
+	console.log(lowercase + " is all lowercase!");
 } // "this is all lowercase is all lowercase!"
 if (!isAllCapital(uppercase)) {
-  console.log(uppercase + " is not all lowercase!");
+	console.log(uppercase + " is not all lowercase!");
 } // "THIS IS ALL CAPITAL is not all lowercase!"
 if (!isAllCapital(mixed)) {
-  console.log(mixed + " is not all lowercase!");
+	console.log(mixed + " is not all lowercase!");
 } // "this IS half/HALF is not all lowercase!"
 ```
 
@@ -176,16 +242,16 @@ const improper = "this is not capitalized";
 const improper2 = "this Is not Capitalized";
 
 if (isCapitalized(capitalized)) {
-  console.log(capitalized + " is capitalized!");
+	console.log(capitalized + " is capitalized!");
 } // This is capitalized is capitalized!
 if (isCapitalized(capitalizedALL)) {
-  console.log(capitalized + " is capitalized!");
+	console.log(capitalized + " is capitalized!");
 } // This Is Capitalized is capitalized!
 if (!isCapitalized(improper)) {
-  console.log(improper + " is not capitalized!");
+	console.log(improper + " is not capitalized!");
 } // this is not capitalized is not capitalized!
 if (!isCapitalized(improper2, true)) {
-  console.log(improper2 + " is not capitalized!");
+	console.log(improper2 + " is not capitalized!");
 } // this Is not Capitalized is not capitalized!
 ```
 
@@ -204,23 +270,23 @@ const stringArray = ["this", "is", "a", "string"];
 const number = 123;
 const numberArray = [1, 2, 3];
 if (isString(string)) {
-  console.log(string + " is a string!");
+	console.log(string + " is a string!");
 } // "this is a string is a string!"
 
 if (isString(stringArray)) {
-  console.log(stringArray + " is a string array!");
+	console.log(stringArray + " is a string array!");
 } // "["this", "is", "a", "string"] is a string array!"
 
 if (!isString(stringArray, false)) {
-  console.log(stringArray + " is not a string!");
+	console.log(stringArray + " is not a string!");
 } // "["this", "is", "a", "string"] is not a string!"
 
 if (!isString(number)) {
-  console.log(number + " is not a string!");
+	console.log(number + " is not a string!");
 } // "123 is not a string!"
 
 if (!isString(numberArray)) {
-  console.log(numberArray + " is not a string array!");
+	console.log(numberArray + " is not a string array!");
 } // "[1, 2, 3] is not a string array!"
 ```
 

@@ -1,38 +1,38 @@
 {
-  "name": "stringulation",
-  "version": "3.0.1",
-  "description": "An NPM package for all things related to strings",
-  "main": "./lib/index.js",
-  "scripts": {
-    "build": "tsc"
-  },
-  "keywords": [
-    "string",
-    "strings",
-    "string man",
-    "stringify",
-    "string manipulation",
-    "javascript",
-    "typescript",
-    "stringulation",
-    "words",
-    "word"
-  ],
-  "author": "mood.",
-  "license": "ISC",
-  "devDependencies": {
-    "typescript": "^4.3.4"
-  },
-  "files": [
-    "lib/**/*",
-    "README.md",
-    "LICENSE"
-  ],
-  "homepage": "https://github.com/MoodTheCoolDude/npm-stringulation#readme",
-  "bugs": {
-    "url": "https://github.com/MoodTheCoolDude/npm-stringulation/issues"
-  },
-  "repository": {
-    "url": "https://github.com/MoodTheCoolDude/npm-stringulation"
-  }
+	"name": "stringulation",
+	"version": "3.0.1",
+	"description": "An NPM package for all things related to strings",
+	"main": "./lib/index.js",
+	"scripts": {
+		"build": "tsc"
+	},
+	"keywords": [
+		"string",
+		"strings",
+		"string man",
+		"stringify",
+		"string manipulation",
+		"javascript",
+		"typescript",
+		"stringulation",
+		"words",
+		"word"
+	],
+	"author": "mood.",
+	"license": "ISC",
+	"devDependencies": {
+		"typescript": "^4.3.4"
+	},
+	"files": [
+		"lib/**/*",
+		"README.md",
+		"LICENSE"
+	],
+	"homepage": "https://github.com/justamood/npm-stringulation#readme",
+	"bugs": {
+		"url": "https://github.com/justamood/npm-stringulation/issues"
+	},
+	"repository": {
+		"url": "https://github.com/justamood/npm-stringulation"
+	}
 }
